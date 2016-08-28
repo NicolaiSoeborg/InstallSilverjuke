@@ -1,12 +1,11 @@
 # Install Silverjuke
 
-Ubuntu 14.04 LTS
+Tested platform: `Ubuntu 14.04 LTS`
 
 
 ```
-sudo apt-get install ubuntu-restricted-extras
 sudo apt-get update
-sudo apt-get install gstreamer1.0 automake python-docutils zlib1g-dev libsqlite3-dev libgl1-mesa-dev libwxgtk3.0-dev
+sudo apt-get install -y --no-install-recommends ubuntu-restricted-extras gstreamer1.0 automake python-docutils zlib1g-dev libsqlite3-dev libgl1-mesa-dev libwxgtk3.0-dev
 ```
 
 
@@ -16,7 +15,7 @@ unzip master.zip
 cd silverjuke-master
 ./autogen.sh
 ./configure
-make
+make -j4
 sudo mkdir /usr/local/share/silverjuke
 ./silverjuke
 ```
